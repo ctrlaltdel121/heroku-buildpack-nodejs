@@ -17,6 +17,9 @@ heroku_dir=$build_dir/.heroku
 mkdir -p $heroku_dir/node
 warnings=$(mktemp)
 
+pv=`python -V`
+head "Python Version: $pv"
+
 # Load dependencies
 source $bp_dir/lib/common.sh
 source $bp_dir/lib/build.sh
